@@ -12,18 +12,18 @@ import unittest
 class Solution(object):
     def isValid(self, s):
         mapping = {
-          "{": "}",
-          "(": ")",
-          "[": "]"
+            "{": "}",
+            "(": ")",
+            "[": "]"
         }
         buffer = ""
         for idx, c in enumerate(s):
-          if c in mapping.keys():
-            buffer += c
-          else:
-            if len(buffer) == 0 or mapping[buffer[-1]] != c:
-              return False
-            buffer = buffer[:-1]
+            if c in mapping.keys():
+                buffer += c
+            else:
+                if len(buffer) == 0 or mapping[buffer[-1]] != c:
+                    return False
+                buffer = buffer[:-1]
         return len(buffer) == 0
 
 

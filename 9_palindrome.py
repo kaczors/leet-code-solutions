@@ -31,7 +31,7 @@ class Solution(object):
         num = x
         result = 1  # init with 1 just to enter the loop
         reminder = 0  # div rest
-        y = 0 # reversed
+        y = 0  # reversed
         if x < 0:
             return False
         while result > 0:
@@ -39,16 +39,9 @@ class Solution(object):
             result = num // 10
             num = result
             if y != 0:
-              y = y * 10
+                y = y * 10
             y = y + reminder
-        return x == y      
-            
-            
-                  
-          
-          
-
-        
+        return x == y
 
 
 class TestSolution(unittest.TestCase):
